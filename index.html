@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Autor" content="Dominic Burfeind">
+  <meta name="Erstellungsdatum" content="04.04.2024">
+  <link rel="stylesheet" href="ressources/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title> Massö - Der BMI rechner</title>
+</head>
+
+<body>
+
+
+<main>
+
+<!--Header-->
+  <header class="header">
+    <div class="header-content">
+      <h1>WILLKOMMEN BEI <br> <span>MASSÖ</span></h1>
+      <p>Der BMI Rechner</p>
+      <div class="btn-container">
+        <a class="button" href="#Bmi-Rechner">Jetzt BMI berechnen</a>
+      </div>
+      
+    </div>
+  </header>
+
+
+  <!--Banner-->
+  <div class="banner">
+    <div class="banner-content">
+      <ul>
+        <li><a href="#Funktion">BMI Rechner Erklärt</a></li>
+        <li><a href="#Kategorien">BMI Kategorien</a></li>
+        <li><a href="#Aussagekraft">Aussagekraft des BMI</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!--BMI Rechner-->
+  <section class="move-in" id="Bmi-Rechner">
+    <div class="bmi-rechner-container">
+      <div class="rechner-container">
+
+        <div class="input-container">
+          <label for="größe">Größe in cm</label>
+          <input type="number" min="0" max="250" id="Größe" name="größe" required>  
+        </div>
+
+        <div class="input-container">
+          <label for="gewicht">Gewicht in Kg</label>
+          <input type="number" id="Gewicht" max="200" min="0" name="gewicht" required>  
+        </div>
+
+        <div class="input-container">
+          <label for="bmi">BMI</label>
+          <input type="text" id="Bmi" name="bmi" readonly>
+        </div>
+      </div>
+
+      <div class="input-container">
+        <input type="button" value="Berechnen" name="berechnen" id="Berechnen" onclick="berechnen (gewichtInput, größeInput)">
+      </div>
+
+      <br>
+
+      <p id="Bmi-kategorie"></p>
+
+      <div class="text-container">
+        <h3>Wie wird der BMI berechnet?</h3>
+        <p>BMI = Gewicht (kg) / (Größe in Metern)²</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!--Wie funktioniert ein BMI rechner-->
+  <section id="Funktion">
+    <div class="content-container funktionen-container">
+      <h2>Wie funktioniert ein BMI rechner</h2>
+      <p>
+        Der <strong>Body-Mass-Index</strong> (BMI) ist ein Verhältnis von <em>Körpergewicht</em> zu <em>Körpergröße</em> und wird berechnet, indem das Gewicht in Kilogramm durch das Quadrat der Körpergröße in Metern geteilt wird.
+      </p>
+        <br>
+        <br>
+      <p>
+        Die Formel dafür lautet: <strong>BMI = Gewicht (kg) / (Größe (m))^2</strong>. Zum Beispiel: Für eine Person mit einem Gewicht von 68 kg und einer Größe von 1,70 m beträgt der BMI 23,5 (68 / (1,70)^2).
+      </p>
+    </div>
+  </section>
+
+
+  <!--BMI kategorien-->
+  <section id="Kategorien">
+    <div class="content-container kategorien-container">
+      <h2>Wie werden die Werte des BMI-Rechners eingeordnet?</h2>
+      <p>
+        Bin ich zu leicht? Bin ich zu schwer? Die Einordnung des Body-Mass-Indexes wurde von der Weltgesundheitsorganisation (WHO) vorgenommen und gilt für <strong>Erwachsene ab 20 Jahre</strong>. Je nach Ergebnis des BMI-Rechners gelten folgende Gewichtsklassen:
+      </p>
+
+      <div class="tabellen-container move-in">
+        <table>
+          <caption>Kategorien basierend auf dem BMI (Body Mass Index)</caption>
+          <thead>
+            <tr>
+              <th>BMI-Bereich</th>
+              <th>Kategorie</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Unter 18,5</td>
+              <td>Untergewicht</td>
+            </tr>
+            <tr>
+              <td>18,5 - 24,9</td>
+              <td>Normalgewicht</td>
+            </tr>
+            <tr>
+              <td>25 - 29,9</td>
+              <td>Übergewicht</td>
+            </tr>
+            <tr>
+              <td>30,0 bis 34,9</td>
+              <td>Adipositas grad |</td>
+            </tr>
+            <tr>
+              <td>35,0 bis 39,9</td>
+              <td>Adipositas grad ||</td>
+            </tr>
+            <tr>
+              <td>über 40</td>
+              <td>Adipositas grad |||</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+
+  <!--Aussagekraft eines BMI Rechner-->
+  <section id="Aussagekraft" class="content-section aussagekraft">
+    <div class="aussagekraft-container">
+      <h2>Welche Aussagekraft haben die Ergebnisse des BMI-Rechners?</h2>
+      <p>
+        Der Body-Mass-Index wird von Experten und Expertinnen eher als Richtwert angesehen, da er nur bedingt aussagekräftigt ist – selbst, wenn ein BMI-Rechner für die Einordnung neben Körpergröße und Gewicht auch Alter und Geschlecht mit berücksichtigt. <strong>So kann er beispielsweise nicht zwischen Muskelmasse und Fettmasse unterscheiden</strong>. <strong>Zudem sagt der BMI nichts über die Verteilung des Körperfetts aus</strong>. Studien belegen, dass bei der abdominalen Adipositas, bei der sich das Fett überwiegend im Bauchraum anlagert, ein besonders hohes Risiko für Begleiterkrankungen besteht.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+
+  <script src="ressources/js/script.js"></script>
+</body>
+</html>

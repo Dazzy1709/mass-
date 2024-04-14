@@ -1,0 +1,371 @@
+/*Universal*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fire Sans", sans-serif, Helvetica;
+  transition: 0.2s ease;
+}
+
+:root {
+  --main-color: #10c491d4;
+  --secondary-color: #68986f;
+  --tiny-font-size: 10px;
+  --small-font-size: 13px;
+  --medium-font-size: 16px;
+  --large-font-size: 20px;
+  --extra-large-font-size: 24px;
+  --huge-font-size: 45px;
+  --largest-font-size: 50px;
+  --border1: 1.5px solid #00000055;
+  --border2: 2px solid grey;
+  --font-color1: #eee;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 35px;
+  margin: 30px;
+  text-shadow: 1px 0px 1px rgba(32, 32, 32, 0.117);
+}
+
+.logo {
+  font-size: var(--huge-font-size);
+  font-weight: bolder;
+  padding: 30px;
+  width: 100%;
+  background-color: var(--secondary-color);
+}
+
+.banner .logo {
+  border-bottom: var(--border1);
+}
+
+.button {
+  padding: 15px;
+  border-radius: 2px ;
+  
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.button:hover {
+  background-color: rgb(50, 197, 50);
+  transition: 0.15s ease-in-out;
+}
+
+
+/*banner*/
+
+.banner {
+  border-right: var(--border1);
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.banner-content ul {
+  width: 100%;
+  text-align: center;
+}
+
+.banner-content li {
+  padding: 15px 0;
+  width: 100%;
+  border-bottom: var(--border1);
+}
+
+.banner-content li a {
+  color: black;
+  font-size: var(--small-font-size);
+}
+
+.banner-content li a:hover {
+  color: var(--secondary-color);
+  transition: 0.15s ease;
+}
+
+
+
+.move-in {
+  opacity: 0; 
+  transform: translateX(-100px); 
+  transition: opacity 0.5s, transform 0.5s; 
+}
+
+.move-in.show {
+  opacity: 1; 
+  transform: translateX(0); 
+}
+
+
+
+/*header*/
+
+header {
+  background-image: url(/ressources/img/man-am-joggen.jpg);
+  background-size: cover;
+  background-position: 10%;
+  height: 400px;
+}
+
+.header-content {
+  padding: 20px;
+}
+
+.header-content h1 {
+  font-size: var(--largest-font-size);
+  margin: 20px 0;
+  text-shadow: 1px 0px 1px rgba(32, 32, 32, 0.191);
+  text-align: center;
+}
+
+.header-content h1 span {
+  color: var(--secondary-color);
+  font-size: 90px;
+}
+
+.header-content p {
+  margin: 10px 0 40px 0;
+  font-size: var(--large-font-size);
+  font-weight: bold;
+  text-align: center;
+}
+
+.header-content .btn-container {
+  text-align: center;
+}
+
+
+
+/*BMI - Rechner*/
+
+#Bmi-Rechner {
+  border: 3px solid rgb(255, 255, 255);
+}
+
+.bmi-rechner-container {
+  padding: 30px;
+}
+
+.rechner-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-container label {
+  font-size: var(--small-font-size);
+  color: #a8a8a8;
+  margin: 5px 0;
+}
+
+.input-container input {
+  height: 30px;
+  width: 200px;
+  text-align: center;
+}
+
+.input-container input[readonly] {
+  border: 1px solid rgba(128, 128, 128, 0.651);
+  background-color: rgba(128, 128, 128, 0.055);
+}
+
+.input-container input[type=button] {
+  width: 140px;
+  height: 40px;
+  border: none;
+  color: white;
+  box-shadow: 1px 0px 2px rgba(128, 128, 128, 0.288);
+  border-radius: 2px;
+  background-color: var(--secondary-color);
+}
+
+.input-container input[type=button]:hover {
+  background-color: rgb(50, 197, 50);
+  box-shadow: none;
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
+}
+
+.bmi-rechner-container .text-container {
+  margin-top: 80px;
+  font-size: 10px;
+  color: #808080ba;
+  line-height: 18px;
+}
+
+.bmi-rechner-container .text-container h3 {
+  font-size: 13px;
+}
+
+#Bmi-kategorie {
+  font-size: var(--medium-font-size);
+  text-align: center;
+  margin: 20px;
+}
+
+
+
+/*Funktionen*/
+
+#Funktion {
+  background-color: #eee;
+}
+
+.funktionen-container {
+  padding: 40px 0px;
+  text-align: center;
+
+}
+
+.funktionen-container p {
+  line-height: 25px;
+  color: #535353;
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+
+/*Kategorien*/
+
+.kategorien-container {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.kategorien-container p {
+  line-height: 25px;
+  color: #535353;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.kategorien-container .tabellen-container { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.kategorien-container table caption {
+  margin: 10px;
+  font-size: 12px;
+  color: #80808094; 
+}
+
+.kategorien-container table {
+  font-size: var(--medium-font-size);
+  width: 80%;
+}
+
+.kategorien-container table thead {
+  background-color: #68986f;
+  font-size: var(--large-font-size);
+  color: white;
+}
+
+.kategorien-container th {
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.kategorien-container td {
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.kategorien-container table tr:nth-child(2) {
+  background-color: #eee;
+}
+
+.kategorien-container table tr:nth-child(4) {
+  background-color: #eee;
+}
+
+.kategorien-container table tr:nth-child(6) {
+  background-color: #eee;
+}
+
+
+
+/*Aussagekraft*/
+
+.aussagekraft {
+  background-image: url(/ressources/img/gewichte\ heben.jpg);
+  background-size: cover;
+  background-position: 100%;
+  color: white;
+}
+
+.aussagekraft-container {
+  padding: 50px;
+}
+
+.aussagekraft-container p {
+  padding: 40px;
+  font-size: var(--medium-font-size);
+  background-color: #eeeeee9c;
+  color: black;
+  border-radius: 5px;
+  word-spacing: 1.5px;
+  line-height: 28px;
+}
+
+
+/*Media Querys*/
+
+@media screen and (max-width: 550px) {
+
+
+
+  header a {
+    margin-top: 20px;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
